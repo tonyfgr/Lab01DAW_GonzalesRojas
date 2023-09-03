@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Reciente - Anime World</title>
+    <!-- Enlaza Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlaza tu hoja de estilo personalizada -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Anime World</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="anime_reciente.html">Anime Reciente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias.html">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca_de.html">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página de Anime Reciente -->
+    <div class="container my-5">
+        <h2>Anime Reciente</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="anime1.jpeg" class="card-img-top" alt="Anime 1">
+                    <div class="card-body">
+                        <h5 class="card-title">DragonBall</h5>
+                        
+                        <a href="#" class="btn btn-primary">Ver capitulos</a>
+                        <button id="mostrarDescripcionBtn1" class="btn btn-primary">Mostrar descripción</button>
+                        <!-- Descripción del anime (inicialmente oculta) -->
+                        <p id="descripcionAnime1" style="display: none;font-family: Arial, sans-serif; margin-top: 20px;text-align: justify;">Dragon Ball nos cuenta la vida de Son Goku, un niño inspirado en la leyenda china del rey mono que tiene cola de simio, una nube voladora y un bastón mágico y que acompaña a Bulma por el mundo en busca de las Bolas de Dragón: siete esferas capaces de conceder cualquier deseo al juntarlas e invocar al dragón Shenlong.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="anime2.jpg" class="card-img-top" alt="Anime 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Slam Dunk</h5>
+                        <a href="#" class="btn btn-primary">Ver capitulos</a>
+                        <button id="mostrarDescripcionBtn2" class="btn btn-primary">Mostrar descripción</button>
+                        <!-- Descripción del anime (inicialmente oculta) -->
+                        <p id="descripcionAnime2" style="display: none;font-family: Arial, sans-serif; margin-top: 20px;text-align: justify;">Hanamichi Sakuragi es un estudiante de secundaria que ha sido rechazado por 50 chicas. En su último año, decide unirse al equipo de baloncesto de su escuela en un intento de impresionar a una chica llamada Haruko Akagi. A pesar de su falta de habilidad inicial, Sakuragi se convierte en un jugador talentoso y ayuda a su equipo a ganar partidos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="anime3.jpg" class="card-img-top" alt="Anime 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Hunter x Hunter</h5>
+                        <a href="#" class="btn btn-primary">Ver capitulos</a>
+                        <button id="mostrarDescripcionBtn3" class="btn btn-primary">Mostrar descripción</button>
+                        <!-- Descripción del anime (inicialmente oculta) -->
+                        <p id="descripcionAnime3" style="display: none;font-family: Arial, sans-serif; margin-top: 20px;text-align: justify;">Gon se entera de que su padre, Ging, es un legendario cazador,un miembro de elite de la humanidad y que se especializa en la búsqueda de criaturas raras, tesoros y secretos. A pesar de que Ging dejo su hijo con el fin de perseguir sus propios sueños, Gon está decidido a seguir los pasos de su padre, aprobar el examen riguroso de Hunter, y encontrar a su padre para convertirse en un cazador.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Anime World</p>
+        </div>
+    </footer>
+
+    <!-- Enlaza Bootstrap JS (opcional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript personalizado -->
+    <script>
+        // Obtén una referencia al botón y la descripción del anime
+        var mostrarDescripcionBtn1 = document.getElementById('mostrarDescripcionBtn1');
+        var descripcionAnime1 = document.getElementById('descripcionAnime1');
+
+        // Agrega un controlador de eventos al botón
+        mostrarDescripcionBtn1.addEventListener('click', function() {
+            // Muestra u oculta la descripción del anime al hacer clic en el botón
+            if (descripcionAnime1.style.display === 'none') {
+                descripcionAnime1.style.display = 'block';
+            } else {
+                descripcionAnime1.style.display = 'none';
+            }
+        });
+    </script>
+        <script>
+        // Obtén una referencia al botón y la descripción del anime
+        var mostrarDescripcionBtn2 = document.getElementById('mostrarDescripcionBtn2');
+        var descripcionAnime2 = document.getElementById('descripcionAnime2');
+
+        // Agrega un controlador de eventos al botón
+        mostrarDescripcionBtn2.addEventListener('click', function() {
+            // Muestra u oculta la descripción del anime al hacer clic en el botón
+            if (descripcionAnime2.style.display === 'none') {
+                descripcionAnime2.style.display = 'block';
+            } else {
+                descripcionAnime2.style.display = 'none';
+            }
+        });
+    </script>
+        <script>
+        // Obtén una referencia al botón y la descripción del anime
+        var mostrarDescripcionBtn3 = document.getElementById('mostrarDescripcionBtn3');
+        var descripcionAnime3 = document.getElementById('descripcionAnime3');
+
+        // Agrega un controlador de eventos al botón
+        mostrarDescripcionBtn3.addEventListener('click', function() {
+            // Muestra u oculta la descripción del anime al hacer clic en el botón
+            if (descripcionAnime3.style.display === 'none') {
+                descripcionAnime3.style.display = 'block';
+            } else {
+                descripcionAnime3.style.display = 'none';
+            }
+        });
+    </script>
+    <!-- Enlaza Bootstrap JS (opcional) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
